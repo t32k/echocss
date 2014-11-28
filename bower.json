@@ -1,0 +1,23 @@
+{
+  "name": "practice_emberjs",
+  "version": "0.0.1",
+  "homepage": "https://github.com/t32k/practice_emberjs",
+  "authors": [
+    "t32k <ijok.ijok@gmail.com>"
+  ],
+  "description": "echocss.com",
+  "main": "index.js",
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember": "~1.8.1",
+    "jquery": "~2.1.1",
+    "handlebars": "~2.0.0"
+  }
+}
