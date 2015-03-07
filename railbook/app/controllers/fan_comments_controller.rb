@@ -29,9 +29,9 @@ class FanCommentsController < ApplicationController
     respond_to do |format|
       if @fan_comment.save
         format.html { redirect_to @fan_comment, notice: 'Fan comment was successfully created.' }
-        format.json { render :show, status: :created, location: @fan_comment }
+        format.json { render action: 'show', status: :created, location: @fan_comment }
       else
-        format.html { render :new }
+        format.html { render action: 'new' }
         format.json { render json: @fan_comment.errors, status: :unprocessable_entity }
       end
     end
@@ -43,9 +43,9 @@ class FanCommentsController < ApplicationController
     respond_to do |format|
       if @fan_comment.update(fan_comment_params)
         format.html { redirect_to @fan_comment, notice: 'Fan comment was successfully updated.' }
-        format.json { render :show, status: :ok, location: @fan_comment }
+        format.json { head :no_content }
       else
-        format.html { render :edit }
+        format.html { render action: 'edit' }
         format.json { render json: @fan_comment.errors, status: :unprocessable_entity }
       end
     end
@@ -56,7 +56,7 @@ class FanCommentsController < ApplicationController
   def destroy
     @fan_comment.destroy
     respond_to do |format|
-      format.html { redirect_to fan_comments_url, notice: 'Fan comment was successfully destroyed.' }
+      format.html { redirect_to fan_comments_url }
       format.json { head :no_content }
     end
   end

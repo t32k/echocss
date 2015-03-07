@@ -29,9 +29,9 @@ class AuthorsController < ApplicationController
     respond_to do |format|
       if @author.save
         format.html { redirect_to @author, notice: 'Author was successfully created.' }
-        format.json { render :show, status: :created, location: @author }
+        format.json { render action: 'show', status: :created, location: @author }
       else
-        format.html { render :new }
+        format.html { render action: 'new' }
         format.json { render json: @author.errors, status: :unprocessable_entity }
       end
     end
@@ -43,9 +43,9 @@ class AuthorsController < ApplicationController
     respond_to do |format|
       if @author.update(author_params)
         format.html { redirect_to @author, notice: 'Author was successfully updated.' }
-        format.json { render :show, status: :ok, location: @author }
+        format.json { head :no_content }
       else
-        format.html { render :edit }
+        format.html { render action: 'edit' }
         format.json { render json: @author.errors, status: :unprocessable_entity }
       end
     end
@@ -56,7 +56,7 @@ class AuthorsController < ApplicationController
   def destroy
     @author.destroy
     respond_to do |format|
-      format.html { redirect_to authors_url, notice: 'Author was successfully destroyed.' }
+      format.html { redirect_to authors_url }
       format.json { head :no_content }
     end
   end
