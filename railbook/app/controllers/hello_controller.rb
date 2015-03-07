@@ -6,4 +6,8 @@ class HelloController < ApplicationController
     @msg = 'こんちわ、世界！!!!!!!!!!!!!!'
   end
 
+  def list
+    @books = Book.all
+  end
+
 end
