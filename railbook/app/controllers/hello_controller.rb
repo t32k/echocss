@@ -2,8 +2,8 @@
 
 class HelloController < ApplicationController
 
-  def index
-    @msg = 'こんちわ、世界！'
+  def view
+    @msg = 'こんちわ、世界！!!!!!!!!!!!!!'
   end
 
 end
