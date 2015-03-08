@@ -4,16 +4,16 @@
       <h2><%= pluralize(@author.errors.count, "error") %> prohibited this author from being saved:</h2>
 
       <ul>
-      <% @author.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% @author.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
+    <%= f.label :user %><br>
+    <%= f.text_field :user %>
   </div>
   <div class="field">
     <%= f.label :name %><br>
