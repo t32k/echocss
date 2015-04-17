@@ -1,0 +1,16 @@
+{
+  "name": "echocss",
+  "version": "0.0.0",
+  "homepage": "https://github.com/t32k/echocss",
+  "authors": [
+    "t32k <ijok.ijok@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
